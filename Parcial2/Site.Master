@@ -10,11 +10,26 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
+    <header>
+        <nav>
+            <asp:HyperLink ID="HyperLink1" runat="server">Registracion</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server">Gestion de Archivos</asp:HyperLink>
+        </nav>
+    </header>
+    
+    <main>
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </main>
+
+    
+
+    <footer>
+        <asp:Label ID="Label1" runat="server" Text="COPYRIGHT 2024"></asp:Label>
+    </footer>
 </body>
 </html>
