@@ -13,5 +13,23 @@ namespace Parcial2
         {
 
         }
+
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (!IsValid) // verificar si los validadores dan true
+                return;
+
+
+            // cargar cookie y sesion
+            //cookio: contraseña
+            HttpCookie cookie1 = new HttpCookie("contraseña", txtContraseña.Text.Trim());
+            Response.Cookies.Add(cookie1);
+
+            //sesion: username
+            Session["username"] = txtUsuario.Text.Trim();
+
+            // redireccionamos a gestion de archivos
+            Response.Redirect("GestionDeArchivos.aspx");
+        }
     }
 }

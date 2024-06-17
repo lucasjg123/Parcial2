@@ -12,10 +12,11 @@
 <body>
     <header>
         <nav>
-            <asp:HyperLink ID="HyperLink1" runat="server">Registracion</asp:HyperLink>
-            <asp:HyperLink ID="HyperLink2" runat="server">Gestion de Archivos</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Registracion.aspx">Registracion</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/GestionDeArchivos.aspx">Gestion de Archivos</asp:HyperLink>
         </nav>
     </header>
+    <br><br>
     
     <main>
         <form id="form1" runat="server">
@@ -27,7 +28,7 @@
     </main>
 
     
-
+    <br><br>
     <footer>
         <asp:Label ID="Label1" runat="server" Text="COPYRIGHT 2024"></asp:Label>
     </footer>

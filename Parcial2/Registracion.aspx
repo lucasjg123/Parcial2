@@ -11,8 +11,9 @@
     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUsuario" ErrorMessage="Debe ingresar un nombre de usuario" ForeColor="#FF3300" Display="None">Debe ingresar un nombre de usuario</asp:RequiredFieldValidator>
     <br>
     <asp:Label ID="Label3" runat="server" Text="Mail:"></asp:Label>
-    <asp:TextBox ID="txtMail" runat="server" TextMode="Email"></asp:TextBox>
+    <asp:TextBox ID="txtMail" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtMail" ErrorMessage="Debe ingresar un mail" ForeColor="#FF3300" Display="None">Debe ingresar un mail</asp:RequiredFieldValidator>
+    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtMail" Display="None" ErrorMessage="El mail debe cumplir con el formato: usuario@dominio.com" ValidationExpression="^(?![._-])(?!.*[.]{2})(?!.*[@]{2})(?!.*[-]{2})(?!.*__)(?!.*@.*@)(?!.*[.-]{2})(?!.*\+)[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$"></asp:RegularExpressionValidator>
     <br>
     <asp:Label ID="Label4" runat="server" Text="Edad:"></asp:Label>
     <asp:TextBox ID="txtEdad" runat="server" TextMode="Number"></asp:TextBox> <!-- mayor o igual a 15: RangeValidator-->
@@ -29,6 +30,6 @@
     <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtContraseña" ControlToValidate="txtContraseña2" ErrorMessage="Las contraseñas no coinciden" Display="None">Las contraseñas no coinciden</asp:CompareValidator>
     <br>
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="#FF3300" />
-    <asp:Button ID="Button1" runat="server" Text="Registrar" />
-</asp:Content>
+    <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" />
+    </asp:Content>
 
